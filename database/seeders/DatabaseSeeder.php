@@ -22,20 +22,18 @@ class DatabaseSeeder extends Seeder
         // ----------------------------------------------------------------
         // Comptes administrateurs (§5.1)
         // ----------------------------------------------------------------
-        User::create([
+        User::firstOrCreate(['email' => 'admin@sezy.bj'], [
             'first_name' => 'Admin',
             'last_name' => 'SEZY',
-            'email' => 'admin@sezy.bj',
             'phone' => '+22900000001',
             'password' => Hash::make('password'),
             'role' => 'super_admin',
             'email_verified_at' => now(),
         ]);
 
-        User::create([
+        User::firstOrCreate(['email' => 'client@sezy.bj'], [
             'first_name' => 'Client',
             'last_name' => 'Démo',
-            'email' => 'client@sezy.bj',
             'phone' => '+22900000002',
             'password' => Hash::make('password'),
             'role' => 'client',

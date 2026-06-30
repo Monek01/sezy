@@ -43,39 +43,39 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // ----------------------------------------------------------------
-        // Catégories (§1: cosmétiques, mode, alimentation)
+        // Catégories
         // ----------------------------------------------------------------
-        $mode = Category::create(['name' => 'Mode', 'slug' => 'mode', 'position' => 1, 'is_active' => true]);
-        Category::create(['name' => 'Hommes', 'slug' => 'mode-hommes', 'parent_id' => $mode->id, 'position' => 1, 'is_active' => true]);
-        Category::create(['name' => 'Femmes', 'slug' => 'mode-femmes', 'parent_id' => $mode->id, 'position' => 2, 'is_active' => true]);
+        $mode = Category::firstOrCreate(['slug' => 'mode'], ['name' => 'Mode', 'position' => 1, 'is_active' => true]);
+        Category::firstOrCreate(['slug' => 'mode-hommes'], ['name' => 'Hommes', 'parent_id' => $mode->id, 'position' => 1, 'is_active' => true]);
+        Category::firstOrCreate(['slug' => 'mode-femmes'], ['name' => 'Femmes', 'parent_id' => $mode->id, 'position' => 2, 'is_active' => true]);
 
-        $cosmetiques = Category::create(['name' => 'Cosmétiques', 'slug' => 'cosmetiques', 'position' => 2, 'is_active' => true]);
-        Category::create(['name' => 'Soin du visage', 'slug' => 'soin-visage', 'parent_id' => $cosmetiques->id, 'position' => 1, 'is_active' => true]);
-        Category::create(['name' => 'Maquillage', 'slug' => 'maquillage', 'parent_id' => $cosmetiques->id, 'position' => 2, 'is_active' => true]);
+        $cosmetiques = Category::firstOrCreate(['slug' => 'cosmetiques'], ['name' => 'Cosmétiques', 'position' => 2, 'is_active' => true]);
+        Category::firstOrCreate(['slug' => 'soin-visage'], ['name' => 'Soin du visage', 'parent_id' => $cosmetiques->id, 'position' => 1, 'is_active' => true]);
+        Category::firstOrCreate(['slug' => 'maquillage'], ['name' => 'Maquillage', 'parent_id' => $cosmetiques->id, 'position' => 2, 'is_active' => true]);
 
-        $alimentation = Category::create(['name' => 'Alimentation', 'slug' => 'alimentation', 'position' => 3, 'is_active' => true]);
-        Category::create(['name' => 'Épicerie', 'slug' => 'epicerie', 'parent_id' => $alimentation->id, 'position' => 1, 'is_active' => true]);
+        $alimentation = Category::firstOrCreate(['slug' => 'alimentation'], ['name' => 'Alimentation', 'position' => 3, 'is_active' => true]);
+        Category::firstOrCreate(['slug' => 'epicerie'], ['name' => 'Épicerie', 'parent_id' => $alimentation->id, 'position' => 1, 'is_active' => true]);
 
-        $electronique = Category::create(['name' => 'Électronique', 'slug' => 'electronique', 'position' => 4, 'is_active' => true]);
+        $electronique = Category::firstOrCreate(['slug' => 'electronique'], ['name' => 'Électronique', 'position' => 4, 'is_active' => true]);
 
         // ----------------------------------------------------------------
         // Marques
         // ----------------------------------------------------------------
-        $brandSezy = Brand::create(['name' => 'SEZY Originals', 'slug' => 'sezy-originals']);
-        $brandGen = Brand::create(['name' => 'Générique', 'slug' => 'generique']);
+        $brandSezy = Brand::firstOrCreate(['slug' => 'sezy-originals'], ['name' => 'SEZY Originals']);
+        $brandGen  = Brand::firstOrCreate(['slug' => 'generique'], ['name' => 'Générique']);
 
         // ----------------------------------------------------------------
-        // Attributs (Couleur, Taille) pour les variantes (§4.2)
+        // Attributs
         // ----------------------------------------------------------------
-        $colorAttr = Attribute::create(['name' => 'Couleur', 'slug' => 'couleur']);
-        $colorRed = AttributeValue::create(['attribute_id' => $colorAttr->id, 'value' => 'Rouge', 'hex_color' => '#dc2626']);
-        $colorBlue = AttributeValue::create(['attribute_id' => $colorAttr->id, 'value' => 'Bleu', 'hex_color' => '#3180d0']);
-        $colorBlack = AttributeValue::create(['attribute_id' => $colorAttr->id, 'value' => 'Noir', 'hex_color' => '#111827']);
+        $colorAttr = Attribute::firstOrCreate(['slug' => 'couleur'], ['name' => 'Couleur']);
+        $colorRed   = AttributeValue::firstOrCreate(['attribute_id' => $colorAttr->id, 'value' => 'Rouge'],  ['hex_color' => '#dc2626']);
+        $colorBlue  = AttributeValue::firstOrCreate(['attribute_id' => $colorAttr->id, 'value' => 'Bleu'],   ['hex_color' => '#3180d0']);
+        $colorBlack = AttributeValue::firstOrCreate(['attribute_id' => $colorAttr->id, 'value' => 'Noir'],   ['hex_color' => '#111827']);
 
-        $sizeAttr = Attribute::create(['name' => 'Taille', 'slug' => 'taille']);
-        $sizeS = AttributeValue::create(['attribute_id' => $sizeAttr->id, 'value' => 'S']);
-        $sizeM = AttributeValue::create(['attribute_id' => $sizeAttr->id, 'value' => 'M']);
-        $sizeL = AttributeValue::create(['attribute_id' => $sizeAttr->id, 'value' => 'L']);
+        $sizeAttr = Attribute::firstOrCreate(['slug' => 'taille'], ['name' => 'Taille']);
+        $sizeS = AttributeValue::firstOrCreate(['attribute_id' => $sizeAttr->id, 'value' => 'S'], []);
+        $sizeM = AttributeValue::firstOrCreate(['attribute_id' => $sizeAttr->id, 'value' => 'M'], []);
+        $sizeL = AttributeValue::firstOrCreate(['attribute_id' => $sizeAttr->id, 'value' => 'L'], []);
 
         // ----------------------------------------------------------------
         // Produits de démonstration
@@ -96,6 +96,8 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($demoProducts as $index => $data) {
+            $slug = Str::slug($data['title']);
+            if (Product::where('slug', 'like', $slug.'%')->exists()) continue;
             $product = Product::create([
                 'category_id' => $data['category_id'],
                 'brand_id' => $index % 2 === 0 ? $brandSezy->id : $brandGen->id,
@@ -133,8 +135,7 @@ class DatabaseSeeder extends Seeder
         // ----------------------------------------------------------------
         // Points de retrait Click & Collect (§3.5)
         // ----------------------------------------------------------------
-        PickupPoint::create([
-            'name' => 'SEZY Store Cotonou Centre',
+        PickupPoint::firstOrCreate(['name' => 'SEZY Store Cotonou Centre'], [
             'city' => 'Cotonou',
             'address' => 'Avenue Steinmetz, Cotonou',
             'latitude' => 6.3654,
@@ -144,8 +145,7 @@ class DatabaseSeeder extends Seeder
             'retrieval_delay_days' => 7,
         ]);
 
-        PickupPoint::create([
-            'name' => 'SEZY Store Porto-Novo',
+        PickupPoint::firstOrCreate(['name' => 'SEZY Store Porto-Novo'], [
             'city' => 'Porto-Novo',
             'address' => 'Quartier Houinmè, Porto-Novo',
             'latitude' => 6.4969,

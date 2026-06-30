@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+        @apply outline-2 outline-offset-2 outline-sezy;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-sezy-dark px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-sezy-900 focus:outline-none focus:ring-2 focus:ring-sezy focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 shadow-md hover:shadow-lg;
+    }
+    .btn-orange {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-sezy-orange px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-sezy-orange-dark focus:outline-none focus:ring-2 focus:ring-sezy-orange focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 shadow-md hover:shadow-lg;
+    }
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl border border-sezy-dark bg-white px-5 py-2.5 text-sm font-semibold text-sezy-dark transition-all hover:bg-sezy-50 focus:outline-none focus:ring-2 focus:ring-sezy focus:ring-offset-2 active:scale-95;
+    }
+    .btn-danger {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95;
+    }
+    .input-field {
+        @apply block w-full rounded-xl border-gray-200 shadow-sm focus:border-sezy focus:ring-sezy text-sm transition bg-white placeholder-gray-400;
+    }
+    .card {
+        @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+    }
+    .card-hover {
+        @apply bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-sezy-100 transition-all duration-200;
+    }
+    .badge {
+        @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+    }
+    .badge-success { @apply badge bg-emerald-100 text-emerald-700; }
+    .badge-warning { @apply badge bg-amber-100 text-amber-700; }
+    .badge-danger { @apply badge bg-red-100 text-red-700; }
+    .badge-info { @apply badge bg-blue-100 text-blue-700; }
+    .badge-neutral { @apply badge bg-gray-100 text-gray-600; }
+    .badge-sezy { @apply badge bg-sezy-100 text-sezy-dark; }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    /* Smooth page transitions */
+    .page-enter-active,
+    .page-leave-active {
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .page-enter-from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    .page-leave-to {
+        opacity: 0;
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { @apply bg-gray-50; }
+    ::-webkit-scrollbar-thumb { @apply bg-gray-200 rounded-full; }
+    ::-webkit-scrollbar-thumb:hover { @apply bg-gray-300; }
+
+    /* Loading skeleton */
+    .skeleton {
+        @apply animate-pulse bg-gray-200 rounded-xl;
+    }
+
+    /* Glassmorphism */
+    .glass {
+        @apply bg-white/80 backdrop-blur-md border border-white/50;
+    }
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="100%" stop-color="#ffe0b2"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="140" y1="80" x2="260" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff3e0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Citrus slice bg -->
+  <circle cx="320" cy="80" r="65" fill="#ff9800" opacity="0.12"/>
+  <circle cx="320" cy="80" r="48" fill="#ff9800" opacity="0.1"/>
+  <line x1="320" y1="32" x2="320" y2="128" stroke="#ff9800" stroke-width="1.5" opacity="0.2"/>
+  <line x1="272" y1="80" x2="368" y2="80" stroke="#ff9800" stroke-width="1.5" opacity="0.2"/>
+  <line x1="286" y1="46" x2="354" y2="114" stroke="#ff9800" stroke-width="1.5" opacity="0.15"/>
+  <line x1="286" y1="114" x2="354" y2="46" stroke="#ff9800" stroke-width="1.5" opacity="0.15"/>
+  <!-- Small orange bg left -->
+  <circle cx="75" cy="310" r="40" fill="#ff9800" opacity="0.1"/>
+  <!-- Bottle -->
+  <rect x="155" y="100" width="90" height="220" rx="20" fill="url(#bottle)" stroke="#ffcc80" stroke-width="2"/>
+  <!-- Cap -->
+  <rect x="163" y="65" width="74" height="42" rx="10" fill="#e65100"/>
+  <!-- Label -->
+  <rect x="165" y="145" width="70" height="130" rx="10" fill="#ff6d00" opacity="0.9"/>
+  <!-- Vitamin C symbol -->
+  <circle cx="200" cy="190" r="22" fill="white" opacity="0.2"/>
+  <text x="200" y="197" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="white" font-weight="900">C</text>
+  <text x="200" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="white" font-weight="700" letter-spacing="1">VITAMINE C</text>
+  <text x="200" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" fill="white" opacity="0.85">SÉRUM ÉCLAT</text>
+  <text x="200" y="257" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" fill="white" opacity="0.85">20% Pure Vit. C</text>
+  <!-- Shine -->
+  <rect x="224" y="112" width="7" height="55" rx="3" fill="white" opacity="0.35"/>
+  <!-- Brand -->
+  <rect x="150" y="340" width="100" height="22" rx="11" fill="#e65100" opacity="0.15"/>
+  <text x="200" y="356" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#e65100" font-weight="700" letter-spacing="2">SEZY</text>
+</svg>

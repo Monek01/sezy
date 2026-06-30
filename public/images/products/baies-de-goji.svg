@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fce4ec"/>
+      <stop offset="100%" stop-color="#f8bbd9"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="120" y1="80" x2="280" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fce4ec"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Goji berry decorations -->
+  <circle cx="70" cy="120" r="14" fill="#e53935" opacity="0.2"/>
+  <circle cx="58" cy="138" r="10" fill="#e53935" opacity="0.15"/>
+  <circle cx="84" cy="135" r="8" fill="#c62828" opacity="0.15"/>
+  <circle cx="330" cy="280" r="16" fill="#e53935" opacity="0.18"/>
+  <circle cx="316" cy="298" r="11" fill="#c62828" opacity="0.14"/>
+  <circle cx="345" cy="295" r="9" fill="#e53935" opacity="0.14"/>
+  <!-- Pouch/bag shape -->
+  <path d="M145 100 Q155 80 200 78 Q245 80 255 100 L270 300 Q270 330 200 335 Q130 330 130 300 Z" fill="url(#bag)" stroke="#f48fb1" stroke-width="1.5"/>
+  <!-- Bag clip top -->
+  <rect x="162" y="72" width="76" height="30" rx="8" fill="#c62828"/>
+  <rect x="170" y="78" width="60" height="18" rx="6" fill="#e53935"/>
+  <!-- Label on bag -->
+  <rect x="150" y="130" width="100" height="150" rx="12" fill="#c62828" opacity="0.9"/>
+  <!-- Berry illustration -->
+  <circle cx="185" cy="168" r="14" fill="#ff5252" opacity="0.85"/>
+  <circle cx="200" cy="160" r="13" fill="#ff1744"/>
+  <circle cx="215" cy="168" r="14" fill="#ff5252" opacity="0.85"/>
+  <circle cx="192" cy="181" r="13" fill="#ff1744" opacity="0.9"/>
+  <circle cx="208" cy="181" r="13" fill="#ff5252" opacity="0.85"/>
+  <!-- Berry highlights -->
+  <circle cx="195" cy="155" r="4" fill="white" opacity="0.3"/>
+  <circle cx="210" cy="163" r="3" fill="white" opacity="0.25"/>
+  <!-- Leaves -->
+  <path d="M197 148 Q195 140 200 138 Q205 140 203 148" fill="#4caf50" opacity="0.8"/>
+  <!-- Label text -->
+  <text x="200" y="210" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="white" font-weight="700" letter-spacing="1">BAIES DE</text>
+  <text x="200" y="225" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="white" font-weight="700" letter-spacing="1">GOJI</text>
+  <line x1="162" y1="233" x2="238" y2="233" stroke="white" stroke-width="0.8" opacity="0.4"/>
+  <text x="200" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" fill="white" opacity="0.85">Superfood · Antioxydants</text>
+  <text x="200" y="264" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" fill="white" opacity="0.85">200g · Séché naturellement</text>
+  <!-- Brand -->
+  <rect x="150" y="348" width="100" height="22" rx="11" fill="#c62828" opacity="0.15"/>
+  <text x="200" y="364" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#c62828" font-weight="700" letter-spacing="2">SEZY</text>
+</svg>

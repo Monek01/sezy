@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /mon-compte
+Disallow: /panier
+Disallow: /commande
+
+Sitemap: /sitemap.xml

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eeeeee"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Minimalist The Ordinary style bottle -->
+  <!-- Bottle body - dropper style -->
+  <rect x="160" y="130" width="80" height="200" rx="8" fill="#1a1a1a"/>
+  <!-- Dropper top -->
+  <rect x="178" y="80" width="44" height="58" rx="6" fill="#2a2a2a"/>
+  <ellipse cx="200" cy="78" rx="22" ry="8" fill="#3a3a3a"/>
+  <!-- Dropper tip -->
+  <rect x="196" y="60" width="8" height="22" rx="4" fill="#1a1a1a"/>
+  <!-- Label - white on black -->
+  <rect x="162" y="145" width="76" height="170" rx="6" fill="white" opacity="0.08"/>
+  <!-- Label text lines -->
+  <text x="200" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="white" font-weight="700" letter-spacing="0.5">THE ORDINARY</text>
+  <line x1="168" y1="182" x2="232" y2="182" stroke="white" stroke-width="0.5" opacity="0.4"/>
+  <text x="200" y="198" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="white" font-weight="700">Niacinamide</text>
+  <text x="200" y="213" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="white" opacity="0.7">10% + Zinc 1%</text>
+  <line x1="168" y1="220" x2="232" y2="220" stroke="white" stroke-width="0.5" opacity="0.4"/>
+  <text x="200" y="238" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="white" opacity="0.5">SÉRUM VISAGE</text>
+  <text x="200" y="252" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="white" opacity="0.5">30 ml</text>
+  <!-- Shine on dropper -->
+  <rect x="183" y="86" width="4" height="44" rx="2" fill="white" opacity="0.15"/>
+  <!-- Brand tag -->
+  <rect x="148" y="350" width="104" height="22" rx="11" fill="#1a1a1a" opacity="0.1"/>
+  <text x="200" y="366" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1a1a1a" font-weight="700" letter-spacing="2">SEZY</text>
+</svg>

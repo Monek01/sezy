@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e8f0fd"/>
+      <stop offset="100%" stop-color="#d6e6fb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="300" fill="url(#bg2)"/>
+
+  <!-- Subtle dot grid -->
+  <pattern id="grid" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+    <circle cx="7.5" cy="7.5" r="0.8" fill="#a8c4ef" opacity="0.4"/>
+  </pattern>
+  <rect width="300" height="300" fill="url(#grid)"/>
+
+  <!-- 4 category tiles -->
+  <rect x="58"  y="58"  width="80" height="80" rx="16" fill="#c6d8f7" stroke="#a8c4ef" stroke-width="1"/>
+  <rect x="162" y="58"  width="80" height="80" rx="16" fill="#b8cff5" stroke="#a8c4ef" stroke-width="1"/>
+  <rect x="58"  y="162" width="80" height="80" rx="16" fill="#b8cff5" stroke="#a8c4ef" stroke-width="1"/>
+  <rect x="162" y="162" width="80" height="80" rx="16" fill="#c6d8f7" stroke="#a8c4ef" stroke-width="1"/>
+
+  <!-- Icons in tiles - top left: shirt -->
+  <path d="M82 83 L88 78 L94 84 L98 80 L102 84 L108 78 L114 83 L111 93 L105 90 L105 118 Q105 122 101 122 L95 122 Q91 122 91 118 L91 90 L85 93 Z" fill="#3180d0" opacity="0.5"/>
+
+  <!-- Top right: shopping bag -->
+  <path d="M180 85 L185 80 Q192 74 199 80 L204 85 L207 85 L207 112 Q207 116 203 116 L181 116 Q177 116 177 112 L177 85 Z" fill="#004aad" opacity="0.45" stroke="#3180d0" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M185 85 Q185 78 192 78 Q199 78 199 85" stroke="#3180d0" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+  <!-- Bottom left: star -->
+  <path d="M98 168 L101 178 L112 178 L103 184 L106 195 L98 189 L90 195 L93 184 L84 178 L95 178 Z" fill="#3180d0" opacity="0.5"/>
+
+  <!-- Bottom right: tag/price -->
+  <rect x="177" y="174" width="45" height="30" rx="6" fill="#004aad" opacity="0.35"/>
+  <circle cx="188" cy="179" r="4" fill="none" stroke="#004aad" stroke-width="2" opacity="0.5"/>
+  <line x1="184" y1="196" x2="217" y2="196" stroke="#3180d0" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- SEZY label -->
+  <rect x="108" y="140" width="84" height="20" rx="10" fill="#004aad" opacity="0.12"/>
+  <text x="150" y="154" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#004aad" font-weight="700" letter-spacing="2.5" opacity="0.8">SEZY</text>
+</svg>

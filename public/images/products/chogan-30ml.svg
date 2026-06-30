@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8f0ff"/>
+      <stop offset="100%" stop-color="#ede0ff"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="165" y1="80" x2="235" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f3e0ff"/>
+      <stop offset="40%" stop-color="#e1bee7"/>
+      <stop offset="100%" stop-color="#9c27b0"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#c8b400"/>
+      <stop offset="100%" stop-color="#a89000"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Sparkles bg -->
+  <path d="M80 100 L83 110 L93 113 L83 116 L80 126 L77 116 L67 113 L77 110Z" fill="#9c27b0" opacity="0.15"/>
+  <path d="M320 250 L322 257 L329 259 L322 261 L320 268 L318 261 L311 259 L318 257Z" fill="#9c27b0" opacity="0.12"/>
+  <path d="M340 100 L342 106 L348 108 L342 110 L340 116 L338 110 L332 108 L338 106Z" fill="#c8b400" opacity="0.2"/>
+  <!-- Slim perfume bottle -->
+  <rect x="172" y="130" width="56" height="200" rx="14" fill="url(#bottle)" stroke="#ce93d8" stroke-width="1.5"/>
+  <!-- Shoulder/neck -->
+  <path d="M172 160 Q172 130 185 125 L215 125 Q228 130 228 160Z" fill="#7b1fa2"/>
+  <!-- Gold cap -->
+  <rect x="180" y="80" width="40" height="50" rx="8" fill="url(#cap)"/>
+  <rect x="185" y="86" width="30" height="38" rx="6" fill="#d4af00"/>
+  <!-- Cap shine -->
+  <rect x="188" y="90" width="4" height="28" rx="2" fill="white" opacity="0.2"/>
+  <!-- Label -->
+  <rect x="178" y="170" width="44" height="110" rx="8" fill="white" opacity="0.15"/>
+  <text x="200" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="white" font-weight="700" font-style="italic">Chogan</text>
+  <line x1="182" y1="202" x2="218" y2="202" stroke="white" stroke-width="0.7" opacity="0.5"/>
+  <text x="200" y="216" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="white" opacity="0.85" letter-spacing="1">PARFUM</text>
+  <!-- Floral design -->
+  <circle cx="200" cy="240" r="14" fill="white" opacity="0.08"/>
+  <path d="M200 228 Q205 234 200 240 Q195 234 200 228Z" fill="white" opacity="0.3"/>
+  <path d="M188 234 Q194 237 197 244 Q190 241 188 234Z" fill="white" opacity="0.25"/>
+  <path d="M212 234 Q206 237 203 244 Q210 241 212 234Z" fill="white" opacity="0.25"/>
+  <text x="200" y="266" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="white" opacity="0.7">30 ml · EDP</text>
+  <!-- Shine on bottle -->
+  <rect x="218" y="142" width="5" height="80" rx="2.5" fill="white" opacity="0.2"/>
+  <!-- Brand -->
+  <rect x="150" y="348" width="100" height="22" rx="11" fill="#7b1fa2" opacity="0.12"/>
+  <text x="200" y="364" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#7b1fa2" font-weight="700" letter-spacing="2">SEZY</text>
+</svg>
